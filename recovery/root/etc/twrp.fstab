@@ -4,7 +4,7 @@
 /system_image		 	        emmc	/dev/block/bootdevice/by-name/system				flags=slotselect;display="System Image";backup=1;flashimg=1
 /vendor					ext4	/dev/block/bootdevice/by-name/vendor				flags=slotselect;display="Vendor";backup=1
 /vendor_image			        emmc	/dev/block/bootdevice/by-name/vendor				flags=slotselect;;display="Vendor Image";backup=1;flashimg=1
-/data					ext4	/dev/block/bootdevice/sda36				flags=fsflags=discard;display="Userdata";encryptable=/persdata/vold/metadata_encryption
+/data					ext4	/dev/block/bootdevice/sda36				flags=fsflags=discard;display="Userdata";keydirectory=/metadata/vold/metadata_encryption
 /storage                                ext4    /data/media/0                                                           flags=display="Internal Storage";usermrf;backup=1;fsflags="bind";removable
 /firmware				vfat	/dev/block/bootdevice/by-name/modem					flags=slotselect;display="Firmware";mounttodecrypt;fsflags=context=u:object_r:firmware_file:s0
 /misc					emmc	/dev/block/bootdevice/by-name/misc
@@ -22,7 +22,7 @@
 /dtbo					emmc	/dev/block/bootdevice/by-name/dtbo					flags=slotselect;backup=1;display="DTBO"
 /vbmeta					emmc	/dev/block/bootdevice/by-name/vbmeta				flags=slotselect;backup=1;display="VBMETA"
 /encrypt	                        emmc	/dev/block/bootdevice/by-name/encrypt               flags=backup=1;wipeduringfactoryreset;wipeingui
-/persdata				ext4	/dev/block/bootdevice/by-name/persdata					flags=backup=1;display="persdata";mounttodecrypt
+/metadata				ext4	/dev/block/bootdevice/by-name/persdata					flags=backup=1;display="persdata";mounttodecrypt
 
 # Removable storage
 /usb-otg				vfat	/dev/block/sdh1 			/dev/block/sdh			flags=display="USB-OTG";storage;wipeingui;removable
