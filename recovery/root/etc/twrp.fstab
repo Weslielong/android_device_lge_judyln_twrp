@@ -4,7 +4,7 @@
 /system_image		 	        emmc	/dev/block/bootdevice/by-name/system				flags=slotselect;display="System Image";backup=1;flashimg=1
 /vendor					ext4	/dev/block/bootdevice/by-name/vendor				flags=slotselect;display="Vendor";backup=1
 /vendor_image			        emmc	/dev/block/bootdevice/by-name/vendor				flags=slotselect;;display="Vendor Image";backup=1;flashimg=1
-/data					ext4	/dev/block/bootdevice/sda26				flags=fsflags=discard;display="Userdata";forceencrypt=/dev/block/bootdevice/by-name/encrypt
+/data					ext4	/dev/block/bootdevice/sda28				flags=fsflags=discard;display="Userdata";forceencrypt=/dev/block/bootdevice/by-name/encrypt
 /storage                                ext4    /data/media/0                                                           flags=display="Internal Storage";usermrf;backup=1;fsflags="bind";removable
 /firmware				vfat	/dev/block/bootdevice/by-name/modem					flags=slotselect;display="Firmware";mounttodecrypt;fsflags=context=u:object_r:firmware_file:s0
 /misc					emmc	/dev/block/bootdevice/by-name/misc
