@@ -28,5 +28,5 @@
 /dev/block/bootdevice/by-name/power                                     /mnt/vendor/power       ext4    nosuid,nodev,barrier=1,noatime,noauto_da_alloc,errors=continue    wait,check,formattable
 /dev/block/bootdevice/by-name/fota                                      /mnt/product/fota        ext4    nosuid,nodev,barrier=1,noatime,noauto_da_alloc,errors=continue    wait,check,formattable
 /dev/block/bootdevice/by-name/carrier                                   /mnt/product/carrier     ext4    nosuid,nodev,barrier=1,noatime,noauto_da_alloc,errors=continue    wait,check,formattable
-/dev/block/bootdevice/by-name/OP                                        /oem/OP             ext4    ro,noatime,nosuid,nodev,barrier=1,data=ordered,noauto_da_alloc,context=u:object_r:op_file:s0    wait,slotselect
+/dev/block/bootdevice/by-name/OP                                        /oem/OP             ext4    rw,noatime,nosuid,nodev,barrier=1,data=ordered,noauto_da_alloc,context=u:object_r:op_file:s0    wait,slotselect
 /dev/cnas                                                               auto                auto    defaults                                               voldmanaged=cnas:auto
